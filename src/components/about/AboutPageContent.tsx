@@ -235,9 +235,9 @@ export default function AboutPageContent() {
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { name: "Rimi Pethani", role: "Co-Founder · Creative Director", focus: "Leads visual identity and packaging direction, shaping distinctive brand worlds from the first sketch to the final shelf." , image: "/founders/rimi.webp", position: "center 24%" },
-              { name: "Vivek Rawal", role: "Co-Founder · Digital Experience Lead", focus: "Connects brand thinking with digital experiences, bringing websites and launch touchpoints together into one cohesive journey.", image: "/founders/vivek.webp", position: "center 22%" },
-              { name: "Saini Gujar", role: "Co-Founder · Brand Strategy Lead", focus: "Shapes brand positioning and the client journey, keeping every creative decision rooted in the audience and the business.", image: "/founders/saini.webp", position: "center 22%" },
+              { name: "Rimi Pethani", role: "Co-Founder · Creative Director", focus: "Leads visual identity and packaging direction, shaping distinctive brand worlds from the first sketch to the final shelf." , image: "", position: "center 24%" },
+              { name: "Vivek Rawal", role: "Co-Founder · Digital Experience Lead", focus: "Connects brand thinking with digital experiences, bringing websites and launch touchpoints together into one cohesive journey.", image: "", position: "center 22%" },
+              { name: "Saini Gujar", role: "Co-Founder · Brand Strategy Lead", focus: "Shapes brand positioning and the client journey, keeping every creative decision rooted in the audience and the business.", image: "", position: "center 22%" },
             ].map((founder, i) => (
               <motion.article
                 key={founder.name}
@@ -248,7 +248,7 @@ export default function AboutPageContent() {
                 className="founder-card overflow-hidden rounded-2xl border border-[#C8BFA8] bg-[#FDFBF6]"
               >
                 <div className="founder-photo-wrap">
-                  <img src={founder.image} alt={founder.name} className="founder-photo" style={{ objectPosition: founder.position }} />
+                  <div className="founder-initials" aria-label={founder.name}>{founder.name.split(" ").map((part) => part[0]).join("")}</div>
                 </div>
                 <div className="p-6">
                   <p className="text-xs uppercase tracking-widest text-[#2A5C3A] font-medium mb-2">{founder.role}</p>
