@@ -222,3 +222,51 @@ select {
 @media (max-width: 640px) {
   .founder-initials { height: 390px; }
 }
+
+/* Portfolio cards: tactile borders and lightweight brand-study artwork */
+.project-artwork {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  pointer-events: none;
+}
+.project-artwork-orbit {
+  position: absolute;
+  width: 13rem;
+  height: 13rem;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  opacity: .22;
+  transform: translate(5rem,-1.5rem);
+}
+.project-artwork-pack {
+  position: relative;
+  z-index: 1;
+  width: 9.5rem;
+  min-height: 7.2rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgba(253,251,246,.92);
+  color: #1C1916;
+  border: 1px solid rgba(28,25,22,.28);
+  border-radius: 5px;
+  box-shadow: 10px 12px 0 rgba(0,0,0,.13);
+  transform: rotate(-5deg) translateY(-.2rem);
+}
+.project-artwork-kicker { font: 600 7px/1.2 var(--font-inter), sans-serif; letter-spacing: .12em; opacity: .55; }
+.project-artwork-name { font: 700 1.15rem/1.1 var(--font-playfair), serif; }
+.project-artwork-line { width: 2.4rem; height: 3px; background: currentColor; opacity: .55; }
+.project-artwork-sub { font: 600 7px/1.2 var(--font-inter), sans-serif; letter-spacing: .1em; text-transform: uppercase; opacity: .65; }
+.project-artwork-swatch {
+  position: absolute;
+  width: 4.5rem;
+  height: 5.5rem;
+  border: 1px solid rgba(255,255,255,.5);
+  background: rgba(255,255,255,.12);
+  transform: rotate(12deg) translate(5.4rem,1.1rem);
+}
