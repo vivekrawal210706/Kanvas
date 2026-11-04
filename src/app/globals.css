@@ -205,3 +205,20 @@ select {
 @media (max-width: 640px) {
   .founder-photo-wrap { height: 390px; }
 }
+
+.founder-initials {
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, #E3DAC8, #F5EFE2);
+  color: #2A5C3A;
+  font-family: var(--font-playfair), serif;
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: -0.08em;
+  border-bottom: 1px solid #C8BFA8;
+}
+@media (max-width: 640px) {
+  .founder-initials { height: 390px; }
+}
