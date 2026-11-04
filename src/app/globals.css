@@ -1,0 +1,164 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ─── Kanvas Design Tokens ─────────────────────────────────────────────── */
+@theme inline {
+  --color-background:           var(--background);
+  --color-foreground:           var(--foreground);
+  --color-card:                 var(--card);
+  --color-card-foreground:      var(--card-foreground);
+  --color-popover:              var(--popover);
+  --color-popover-foreground:   var(--popover-foreground);
+  --color-primary:              var(--primary);
+  --color-primary-foreground:   var(--primary-foreground);
+  --color-secondary:            var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted:                var(--muted);
+  --color-muted-foreground:     var(--muted-foreground);
+  --color-accent:               var(--accent);
+  --color-accent-foreground:    var(--accent-foreground);
+  --color-green:                var(--green);
+  --color-green-dark:           var(--green-dark);
+  --color-brown:                var(--brown);
+  --color-cream:                var(--cream);
+  --color-destructive:          var(--destructive);
+  --color-border:               var(--border);
+  --color-input:                var(--input);
+  --color-ring:                 var(--ring);
+
+  --font-sans:    var(--font-inter);
+  --font-heading: var(--font-playfair);
+  --font-mono:    ui-monospace, monospace;
+
+  --radius-sm:  calc(var(--radius) * 0.6);
+  --radius-md:  calc(var(--radius) * 0.8);
+  --radius-lg:  var(--radius);
+  --radius-xl:  calc(var(--radius) * 1.6);
+  --radius-2xl: calc(var(--radius) * 2.2);
+}
+
+/* ─── Color Palette — Cream & Forest Green ─────────────────────────────── */
+:root {
+  --background:           #EDE6D6;   /* warm oat cream */
+  --foreground:           #1C1916;
+
+  --card:                 #F5EFE2;   /* soft butter white */
+  --card-foreground:      #1C1916;
+
+  --popover:              #F5EFE2;
+  --popover-foreground:   #1C1916;
+
+  --primary:              #2A5C3A;
+  --primary-foreground:   #F5EFE2;
+
+  --secondary:            #E3DAC8;   /* deeper linen */
+  --secondary-foreground: #1C1916;
+
+  --muted:                #D9D0BC;
+  --muted-foreground:     #7A7264;
+
+  --accent:               #2A5C3A;
+  --accent-foreground:    #F5EFE2;
+
+  --green:                #2A5C3A;
+  --green-dark:           #1E4429;
+  --green-light:          #4A8A5E;
+  --brown:                #8B6F52;
+  --brown-light:          #B89B80;
+  --cream:                #EDE6D6;
+
+  --destructive:          #C0392B;
+  --border:               #C8BFA8;
+  --input:                #E3DAC8;
+  --ring:                 #2A5C3A;
+
+  --radius: 0.5rem;
+}
+
+/* ─── Base Styles ──────────────────────────────────────────────────────── */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-inter), sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-inter), sans-serif;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-playfair), serif;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: #1C1916;
+  }
+
+  ::selection {
+    background: #2A5C3A30;
+    color: #1C1916;
+  }
+
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: #F5F2EB; }
+  ::-webkit-scrollbar-thumb { background: #C8BFB0; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #2A5C3A; }
+}
+
+/* ─── Utility Classes ──────────────────────────────────────────────────── */
+@layer utilities {
+  .text-green    { color: var(--green); }
+  .bg-green      { background-color: var(--green); }
+  .text-brown    { color: var(--brown); }
+
+  /* Section spacing */
+  .section-py    { padding-top: 6rem; padding-bottom: 6rem; }
+  .section-px    { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .container-kanvas { max-width: 1200px; margin: 0 auto; }
+
+  /* Divider line */
+  .divider       { border-top: 1px solid #D8D2C6; }
+
+  /* Paper card */
+  .paper-card {
+    background: #FDFBF6;
+    border: 1px solid #E0D9CE;
+    border-radius: 12px;
+  }
+
+  /* Green card */
+  .green-card {
+    background: #2A5C3A;
+    color: #F5F2EB;
+    border-radius: 12px;
+  }
+
+  /* Ink stroke underline */
+  .underline-green {
+    text-decoration: underline;
+    text-decoration-color: #2A5C3A;
+    text-underline-offset: 4px;
+  }
+
+  /* Tag pill */
+  .tag-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid #D8D2C6;
+    font-size: 0.75rem;
+    color: #7A7264;
+    background: transparent;
+  }
+}
