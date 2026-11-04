@@ -59,6 +59,16 @@ export default function WorkSection() {
                       backgroundImage: `radial-gradient(circle at 70% 30%, ${project.accentColor} 0%, transparent 60%)`,
                     }}
                   />
+<div className="project-artwork" aria-hidden="true">
+                    <div className="project-artwork-orbit" />
+                    <div className="project-artwork-pack">
+                      <span className="project-artwork-kicker">KANVAS / BRAND STUDY</span>
+                      <span className="project-artwork-name">{project.name}</span>
+                      <span className="project-artwork-line" />
+                      <span className="project-artwork-sub">{project.category}</span>
+                    </div>
+                    <div className="project-artwork-swatch" />
+                  </div>
                   <div className="relative z-10">
                     <span
                       className="text-xs font-medium uppercase tracking-widest font-sans mb-2 block opacity-70"
