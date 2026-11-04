@@ -27,8 +27,8 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#F1D8CB]/95 backdrop-blur-md border-b border-[#D98A75] shadow-sm"
-          : "bg-[#F1D8CB]/90 backdrop-blur-sm border-b border-[#D98A75]/70 shadow-sm"
+          ? "bg-[#D9D0BC]/98 backdrop-blur-md border-b border-[#C8BFA8] shadow-sm"
+          : "bg-[#E3DAC8]/95 backdrop-blur-sm border-b border-[#C8BFA8] shadow-sm"
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
@@ -44,7 +44,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-[#1C2A3D] hover:text-[#C85F4B] transition-colors duration-200"
+                className="text-sm text-[#7A7264] hover:text-[#1C1916] transition-colors duration-200"
               >
                 {link.label}
               </Link>
@@ -55,7 +55,7 @@ export default function Navbar() {
           <div className="hidden md:flex">
             <Link
               href="/contact"
-              className="inline-flex items-center px-5 py-2 rounded-full bg-[#1C2A3D] text-[#FFF9EF] text-sm font-medium hover:bg-[#30445E] transition-colors duration-200"
+              className="inline-flex items-center px-5 py-2 rounded-full bg-[#2A5C3A] text-[#EDE6D6] text-sm font-medium hover:bg-[#1E4429] transition-colors duration-200"
             >
               Work with us
             </Link>
@@ -63,7 +63,7 @@ export default function Navbar() {
 
           {/* Mobile toggle */}
           <button
-            className="md:hidden p-1.5 text-[#1C2A3D] hover:text-[#C85F4B] transition-colors"
+            className="md:hidden p-1.5 text-[#7A7264] hover:text-[#1C1916] transition-colors"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
             id="mobile-menu-toggle"
@@ -81,7 +81,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden bg-[#F1D8CB] border-t border-[#D98A75] overflow-hidden"
+            className="md:hidden bg-[#E3DAC8] border-t border-[#C8BFA8] overflow-hidden"
           >
             <div className="px-6 py-5 flex flex-col gap-4">
               {navLinks.map((link) => (
@@ -97,7 +97,7 @@ export default function Navbar() {
               <Link
                 href="/contact"
                 onClick={() => setMenuOpen(false)}
-                className="mt-1 inline-flex justify-center px-5 py-2.5 rounded-full bg-[#1C2A3D] text-[#FFF9EF] text-sm font-medium"
+                className="mt-1 inline-flex justify-center px-5 py-2.5 rounded-full bg-[#2A5C3A] text-[#EDE6D6] text-sm font-medium"
               >
                 Work with us
               </Link>
